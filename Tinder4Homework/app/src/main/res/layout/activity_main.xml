@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/buttonCreatePost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Post"
+        android:layout_alignParentRight="true"/>
+
+    <ImageView
+        android:id="@+id/homework"
+        android:layout_width="fill_parent"
+        android:layout_height="300dp"
+        android:layout_below="@+id/buttonCreatePost"
+        android:src="@drawable/maths"
+        />
+
+    <ImageView
+        android:id="@+id/acceptImageButton"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/homework"
+        android:src="@drawable/accept"
+        />
+
+    <ImageView
+        android:id="@+id/declineImageButton"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/homework"
+        android:layout_toRightOf="@+id/acceptImageButton"
+        android:src="@drawable/decline"
+        />
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/declineImageButton"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout">
+
+        <Button
+            android:id="@+id/buttonBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"/>
+
+        <Button
+            android:id="@+id/buttonChat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chat"
+            />
+
+        <Button
+            android:id="@+id/buttonMaps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Maps"
+            />
+    </LinearLayout>
+
+</RelativeLayout>
