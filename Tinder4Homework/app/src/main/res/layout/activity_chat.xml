@@ -11,6 +11,12 @@
         android:orientation="vertical"
         android:padding="20dp">
 
+        <Button
+            android:id="@+id/buttonMaps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Show location" />
+
         <EditText
             android:id="@+id/messageEdit"
             android:layout_width="match_parent"
@@ -27,7 +33,7 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
             android:background="@color/background_floating_material_dark"
-            android:text="Send MSG"
+            android:text="Send"
             android:textColor="@color/background_material_light"/>
 
         <ListView
@@ -49,7 +55,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left|center_vertical"
-            android:text="MySelf"
+            android:text=""
             android:singleLine="false"
             android:textSize="20dp" />
 

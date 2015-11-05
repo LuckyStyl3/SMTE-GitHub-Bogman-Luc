@@ -42,7 +42,7 @@ public class CreatePost extends Activity {
         Huiswerk = (ImageView) findViewById(R.id.imageViewHuiswerk);
 
 
-        Button buttonBack = (Button) findViewById(R.id.buttonBack);
+        Button buttonBack = (Button) findViewById(R.id.buttonSubmit);
         buttonBack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 finish();

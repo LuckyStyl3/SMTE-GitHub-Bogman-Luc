@@ -1,6 +1,7 @@
 package com.example.luc.tinder4homework;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.text.TextUtils;
@@ -25,6 +26,7 @@ public class ChatActivity extends MainActivity {
     private EditText messageET;
     private ListView messagesContainer;
     private Button sendBtn;
+    private Button buttonMaps;
     private ChatAdapter adapter;
     private ArrayList<ChatMessage> chatHistory;
 
@@ -40,10 +42,13 @@ public class ChatActivity extends MainActivity {
         messageET = (EditText) findViewById(R.id.messageEdit);
         sendBtn = (Button) findViewById(R.id.chatSendButton);
 
+        buttonMaps = (Button) findViewById(R.id.buttonMaps);
+
+
         TextView meLabel = (TextView) findViewById(R.id.meLbl);
         TextView companionLabel = (TextView) findViewById(R.id.friendLabel);
         RelativeLayout container = (RelativeLayout) findViewById(R.id.container);
-        companionLabel.setText("My Buddy");// Hard Coded
+        companionLabel.setText("Danny382");// Hard Coded
         loadDummyHistory();
 
         sendBtn.setOnClickListener(new View.OnClickListener() {
@@ -63,6 +68,12 @@ public class ChatActivity extends MainActivity {
                 messageET.setText("");
 
                 displayMessage(chatMessage);
+            }
+        });
+        buttonMaps.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intentMaps = new Intent(ChatActivity.this, MapsActivity.class);
+                startActivity(intentMaps);
             }
         });
     }
@@ -90,7 +101,7 @@ public class ChatActivity extends MainActivity {
         ChatMessage msg1 = new ChatMessage();
         msg1.setId(2);
         msg1.setMe(false);
-        msg1.setMessage("How r u doing???");
+        msg1.setMessage("Can you help me with my homework?");
         msg1.setDate(DateFormat.getDateTimeInstance().format(new Date()));
         chatHistory.add(msg1);
 
